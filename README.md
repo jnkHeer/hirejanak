@@ -1,13 +1,13 @@
 # Janak Raj | Portfolio & Resume
 
-Senior Software Engineer with 8+ years building mobile apps, web dashboards and REST APIs for fintech, payments, healthcare, edtech and IoT.
+Software Developer with 8+ years building web applications, REST APIs and mobile apps for fintech, payments, healthcare, edtech and IoT.
 
 - **Live portfolio:** https://hirejanak.web.app
 - **Resume (PDF):** [resume/Janak_Raj_Resume.pdf](resume/Janak_Raj_Resume.pdf)
 - **Resume (Word):** [resume/Janak_Raj_Resume.docx](resume/Janak_Raj_Resume.docx)
 - **LinkedIn:** https://www.linkedin.com/in/janak-raj-software-dev
 
-**Stack:** Flutter, Dart, Android (Kotlin, Java), iOS, Node.js, Python (FastAPI), REST APIs, AWS, Firebase, CI/CD
+**Stack:** Node.js, Python (FastAPI), JavaScript, REST APIs, Flutter, Android, iOS, AWS, Firebase, CI/CD
 
 ## What's in this repo
 
