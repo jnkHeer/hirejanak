@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Janak Raj | Full Stack Software Developer · Mobile, Web & APIs</title>
+<meta name="description" content="Janak Raj, Full Stack Software Developer with 8+ years building mobile apps, web apps and the APIs behind them. Flutter, Android, iOS, Node.js, Python, AWS and Firebase.">
+<meta property="og:title" content="Janak Raj | Full Stack Software Developer">
+<meta property="og:description" content="8+ years building mobile apps, web apps and REST APIs for fintech, payments, healthcare, edtech and IoT.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#07090f">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07090f;--bg2:#0b0f19;--card:#111726;--card2:#151c2e;--line:rgba(255,255,255,.08);
+  --text:#e9edf5;--muted:#93a0b8;--a:#7c5cff;--b:#22c7f0;--c:#3ee08f;--d:#ffb547;
+  --grad:linear-gradient(100deg,var(--a),var(--b));
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:96px 0;position:relative;scroll-margin-top:68px}
+.alt{background:var(--bg2)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);border:1px solid var(--line);background:rgba(255,255,255,.03);padding:6px 14px;border-radius:999px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--c);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(62,224,143,.6)}70%{box-shadow:0 0 0 10px rgba(62,224,143,0)}100%{box-shadow:0 0 0 0 rgba(62,224,143,0)}}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2.title{font-size:clamp(28px,4vw,42px);font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-.5px}
+p.sub{color:var(--muted);text-align:center;max-width:640px;margin:0 auto 48px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:12px;font-weight:600;font-size:15px;border:1px solid var(--line);transition:transform .2s,border-color .2s;cursor:pointer;font-family:inherit;white-space:nowrap}
+.btn.primary{background:var(--grad);border:none;color:#fff;box-shadow:0 10px 30px -10px rgba(124,92,255,.7)}
+.btn.ghost{background:rgba(255,255,255,.04);color:var(--text)}
+.btn.ghost:hover{border-color:rgba(124,92,255,.6)}
+.btn:hover{transform:translateY(-2px)}
+.btn.sm{padding:9px 16px;font-size:14px}
+.btn svg{width:16px;height:16px;fill:currentColor}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s}
+nav.scrolled{background:rgba(7,9,15,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:20px}
+.links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+.links a{transition:color .2s}
+.links a:hover,.links a.active{color:var(--text)}
+.burger{display:none;background:none;border:0;color:var(--text);font-size:24px;cursor:pointer;line-height:1}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;text-align:center;padding:120px 0 70px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 50% 18%,rgba(124,92,255,.22),transparent 70%),radial-gradient(500px 300px at 85% 70%,rgba(34,199,240,.12),transparent 70%);pointer-events:none}
+.stars{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero h1{font-size:clamp(40px,7.5vw,80px);font-weight:800;line-height:1.08;margin:22px 0 18px;letter-spacing:-1.5px}
+.roles{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 18px;font-size:clamp(15px,2vw,20px);font-weight:600;margin-bottom:22px}
+.roles span:nth-of-type(1){color:#a78bfa}.roles span:nth-of-type(2){color:var(--b)}.roles span:nth-of-type(3){color:var(--c)}
+.roles i{width:1px;height:20px;background:rgba(255,255,255,.18)}
+.hero p.lead{color:var(--muted);max-width:700px;margin:0 auto 34px;font-size:17px}
+.hero .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.socials{display:flex;gap:12px;justify-content:center;margin-top:30px}
+.socials a{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);background:rgba(255,255,255,.03);transition:.2s}
+.socials a:hover{border-color:var(--a);transform:translateY(-2px)}
+.socials svg{width:19px;height:19px;fill:var(--text)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px}
+.stat{background:rgba(17,23,38,.75);border:1px solid var(--line);border-radius:18px;padding:22px 16px;text-align:center}
+.stat b{display:block;font-size:32px;font-weight:800;line-height:1.2}
+.stat span{color:var(--muted);font-size:14px}
+
+/* marquee */
+.marquee{overflow:hidden;border-top:1px solid var(--line);padding:16px 0;background:var(--bg2);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee:last-of-type{border-bottom:1px solid var(--line)}
+.track{display:flex;gap:14px;width:max-content;animation:scroll 45s linear infinite}
+.marquee.rev .track{animation-direction:reverse;animation-duration:55s}
+.pill{white-space:nowrap;padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:14px;color:var(--muted);font-weight:500}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.svc-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.svc-card:hover{border-color:rgba(124,92,255,.5);transform:translateY(-4px)}
+.svc-ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px}
+.svc-ico svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.i1{background:linear-gradient(135deg,#7c5cff,#5b3fd9)}.i2{background:linear-gradient(135deg,#22c7f0,#1185b8)}.i3{background:linear-gradient(135deg,#3ee08f,#1a9c5c)}.i4{background:linear-gradient(135deg,#ffb547,#e07b16)}
+.svc-card h3{font-size:19px;margin-bottom:8px}
+.svc-card p{color:var(--muted);font-size:14.5px;margin-bottom:14px}
+.svc-card ul{list-style:none;font-size:14px;margin-bottom:18px;flex:1}
+.svc-card li{padding:5px 0 5px 18px;position:relative}
+.svc-card li::before{content:"";position:absolute;left:0;top:13px;width:7px;height:7px;border-radius:2px;background:var(--a)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:12px;padding:4px 10px;border-radius:8px;background:rgba(124,92,255,.12);color:#c4b5fd;font-weight:600}
+.layer{font-size:11px;padding:3px 9px;border-radius:999px;font-weight:700;letter-spacing:.4px;text-transform:uppercase}
+.l-m{background:rgba(124,92,255,.16);color:#c4b5fd}.l-w{background:rgba(34,199,240,.14);color:#7fe0f7}.l-a{background:rgba(62,224,143,.14);color:#86efb7}.l-c{background:rgba(255,181,71,.14);color:#ffd08a}
+
+/* projects */
+.feat{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:40px;margin-bottom:28px}
+.feat:nth-child(even) .visual{order:-1}
+.p-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.num{font-size:14px;font-weight:700;color:var(--muted)}
+.layers{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;letter-spacing:1.5px;color:var(--b);font-weight:700;text-transform:uppercase;margin-bottom:8px}
+.feat h3{font-size:clamp(22px,2.6vw,28px);font-weight:800;margin-bottom:10px;line-height:1.25}
+.feat p{color:var(--muted);margin-bottom:16px}
+.feat ul{list-style:none;margin-bottom:20px}
+.feat li{padding-left:24px;position:relative;margin-bottom:8px;font-size:15px}
+.feat li::before{content:"";position:absolute;left:2px;top:8px;width:11px;height:6px;border-left:2px solid var(--c);border-bottom:2px solid var(--c);transform:rotate(-45deg)}
+.feat .chips{margin-bottom:22px}
+.links-row{display:flex;gap:12px;flex-wrap:wrap}
+
+/* mock visuals */
+.visual{aspect-ratio:4/3;border-radius:20px;position:relative;overflow:hidden;border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.v1{background:radial-gradient(circle at 30% 15%,#2b2f8f,#0b1430 72%)}
+.v2{background:radial-gradient(circle at 30% 15%,#0f6b5b,#06201c 72%)}
+.v3{background:radial-gradient(circle at 30% 15%,#8a4b10,#2a1306 72%)}
+.v4{background:radial-gradient(circle at 30% 15%,#6b1f7a,#1e0a26 72%)}
+.v5{background:radial-gradient(circle at 30% 15%,#8a1a3d,#26070f 72%)}
+.v6{background:radial-gradient(circle at 30% 15%,#114a63,#04141d 72%)}
+.phone{width:30%;min-width:118px;aspect-ratio:9/19;background:#0b0f19;border:5px solid #1f2637;border-radius:26px;position:absolute;padding:16px 9px 9px;box-shadow:0 30px 60px -20px rgba(0,0,0,.8);display:flex;flex-direction:column;gap:7px}
+.phone::before{content:"";position:absolute;top:5px;left:50%;transform:translateX(-50%);width:34%;height:6px;border-radius:6px;background:#1f2637}
+.browser{width:78%;aspect-ratio:16/10;background:#0b0f19;border:1px solid #232b3e;border-radius:12px;position:absolute;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.8)}
+.bbar{height:22px;background:#151c2e;display:flex;align-items:center;gap:5px;padding:0 9px}
+.bbar i{width:7px;height:7px;border-radius:50%;background:#ff5f57}.bbar i:nth-child(2){background:#febc2e}.bbar i:nth-child(3){background:#28c840}
+.bbar span{margin-left:10px;flex:1;height:11px;border-radius:5px;background:#0b0f19;font:9px/11px var(--mono);color:#5d6a85;padding-left:7px;overflow:hidden;white-space:nowrap}
+.bbody{display:flex;height:calc(100% - 22px)}
+.side{width:22%;background:#0f1422;padding:9px 7px;display:flex;flex-direction:column;gap:6px}
+.side b{height:7px;border-radius:4px;background:#1f2840}.side b:first-child{background:var(--acc,#7c5cff);opacity:.8}
+.main{flex:1;padding:10px;display:flex;flex-direction:column;gap:8px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.kpi{background:#151c2e;border-radius:6px;padding:6px}
+.kpi s{display:block;height:5px;width:55%;border-radius:3px;background:#2a3350;text-decoration:none;margin-bottom:5px}
+.kpi u{display:block;height:9px;width:75%;border-radius:3px;background:var(--acc,#7c5cff);opacity:.85;text-decoration:none}
+.chart{flex:1;background:#151c2e;border-radius:6px;display:flex;align-items:flex-end;gap:5%;padding:8px 9px}
+.chart i{flex:1;border-radius:3px 3px 0 0;background:linear-gradient(var(--acc,#7c5cff),transparent)}
+.rows{display:flex;flex-direction:column;gap:5px}
+.rows b{height:7px;border-radius:4px;background:#1c2438}
+.ph-card{border-radius:10px;padding:9px;background:linear-gradient(135deg,var(--acc,#7c5cff),#1d2540)}
+.ph-card s{display:block;height:5px;width:45%;background:rgba(255,255,255,.5);border-radius:3px;text-decoration:none;margin-bottom:6px}
+.ph-card u{display:block;height:11px;width:70%;background:#fff;border-radius:3px;text-decoration:none}
+.ph-row{display:flex;align-items:center;gap:6px;background:#141a2a;border-radius:8px;padding:6px}
+.ph-row i{width:14px;height:14px;border-radius:50%;background:var(--acc,#7c5cff);opacity:.7;flex-shrink:0}
+.ph-row b{flex:1;height:6px;border-radius:3px;background:#273049}
+.ph-row em{width:18%;height:6px;border-radius:3px;background:var(--c);opacity:.7}
+.ph-btn{margin-top:auto;height:20px;border-radius:7px;background:var(--acc,#7c5cff)}
+.ph-big{display:grid;place-items:center;flex:1}
+.ph-big i{width:58%;aspect-ratio:1;border-radius:50%;border:3px solid var(--acc);box-shadow:0 0 0 8px rgba(255,255,255,.04),0 0 30px var(--acc)}
+.code{position:absolute;background:#0a0e17;border:1px solid #232b3e;border-radius:10px;padding:10px 12px;font:10.5px/1.6 var(--mono);color:#a9b4c9;box-shadow:0 30px 60px -20px rgba(0,0,0,.8);white-space:pre}
+.code .k{color:#7fe0f7}.code .s{color:#86efb7}.code .n{color:#ffd08a}.code .m{color:#c4b5fd}.code .g{color:#5d6a85}
+.vname{position:absolute;bottom:14px;left:18px;font-weight:800;font-size:15px;letter-spacing:.3px;color:rgba(255,255,255,.85);z-index:3}
+
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start}
+.about p{color:var(--muted);margin-bottom:16px}
+.about p b{color:var(--text)}
+.about h3{font-size:26px;margin-bottom:16px;line-height:1.3}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.value{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;font-weight:600;font-size:15px}
+.value small{display:block;color:var(--muted);font-weight:400;margin-top:4px;font-size:13px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.skill-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.skill-card h4{font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.row:last-child{border:0}
+.lvl{font-size:11.5px;padding:3px 9px;border-radius:999px;font-weight:600;white-space:nowrap}
+.lvl.e{background:rgba(62,224,143,.12);color:var(--c)}
+.lvl.a{background:rgba(34,199,240,.12);color:var(--b)}
+.lvl.p{background:rgba(124,92,255,.14);color:#c4b5fd}
+
+/* timeline */
+.timeline{position:relative;max-width:880px;margin:0 auto}
+.timeline::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a),var(--b),rgba(34,199,240,.1))}
+.job{position:relative;padding-left:44px;margin-bottom:26px}
+.job::before{content:"";position:absolute;left:4px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--bg2);border:3px solid var(--a)}
+.job.now::before{border-color:var(--c);box-shadow:0 0 12px rgba(62,224,143,.6)}
+.job.edu::before{border-color:var(--b)}
+.job-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px}
+.meta{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:13px;color:var(--muted);margin-bottom:4px}
+.job h4{font-size:19px;line-height:1.35}
+.co{color:var(--b);font-weight:600;margin-bottom:6px}
+.job ul{margin:8px 0 14px 18px;color:var(--muted);font-size:15px}
+.job li{margin-bottom:5px}
+.job li::marker{color:var(--a)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:start}
+.c-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+.c-item{display:flex;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line);min-width:0}
+.c-item:last-of-type{border:0}
+.c-item>div:last-child{min-width:0;overflow-wrap:anywhere}
+.c-ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(124,92,255,.14);flex-shrink:0}
+.c-ico svg{width:19px;height:19px;fill:#c4b5fd}
+.c-item small{display:block;color:var(--muted);font-size:13px}
+.c-item a:hover{color:var(--b)}
+form label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px}
+form input,form textarea,form select{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:15px}
+form select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 15px) 50%;background-size:5px 5px;background-repeat:no-repeat}
+form input:focus,form textarea:focus,form select:focus{outline:none;border-color:var(--a)}
+form textarea{min-height:110px;resize:vertical}
+.form-btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.form-note{font-size:13px;color:#ff8a8a;margin-top:10px;min-height:18px}
+
+footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--muted);font-size:14px}
+
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none}}
+
+@media(max-width:1020px){.svc,.skills{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){
+  section{padding:72px 0}
+  .links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:rgba(7,9,15,.97);padding:20px 22px;gap:16px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .burger{display:block}
+  .nav-cta{display:none}
+  .feat,.about,.contact{grid-template-columns:1fr}
+  .feat:nth-child(even) .visual{order:0}
+  .feat{padding:24px;gap:28px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .roles{flex-direction:column;gap:4px}
+  .roles i{display:none}
+  .hero .ctas{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .hero .ctas .btn:first-child{grid-column:1/-1}
+  .hero p.lead{font-size:16px}
+  .svc,.skills{grid-template-columns:1fr}
+  .stat b{font-size:26px}
+  .form-btns{grid-template-columns:1fr}
+  .code{font-size:9px}
+  .job{padding-left:34px}
+  .job-card{padding:18px}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#home" class="logo grad">Janak Raj</a>
+    <div class="links" id="links">
+      <a href="#services">What I Build</a><a href="#projects">Projects</a><a href="#about">About</a>
+      <a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </div>
+    <a href="Janak_Raj_Resume.pdf" download class="btn primary sm nav-cta"><svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>Resume</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <canvas class="stars" id="stars"></canvas>
+  <div class="wrap" style="position:relative">
+    <span class="eyebrow"><span class="dot"></span>Open to Full Stack, Mobile & Backend roles</span>
+    <h1>Hi, I'm <span class="grad">Janak Raj</span></h1>
+    <div class="roles"><span>Full Stack Developer</span><i></i><span>Mobile · Web · APIs</span><i></i><span>Flutter · Node.js · Python</span></div>
+    <p class="lead">Software Developer with 8+ years building mobile apps, web apps and the APIs behind them. I take products from database and backend to the App Store, Play Store and browser, for fintech, payments, healthcare, edtech and IoT.</p>
+    <div class="ctas">
+      <a href="#projects" class="btn primary">View My Work</a>
+      <a href="Janak_Raj_Resume.pdf" class="btn ghost" download>Download Resume</a>
+      <a href="#contact" class="btn ghost">Get In Touch</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/janak-raj-software-dev" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+      <a href="https://github.com/jnkHeer" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+      <a href="https://wa.me/919465065059" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.13-.27-.2-.57-.35M12.05 21.8h-.01a9.870 9.870 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.890-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.140 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.49-8.41"/></svg></a>
+      <a href="mailto:janak206@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6l8 5 8-5v2.24z"/></svg></a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b class="grad">8+</b><span>Years in software</span></div>
+      <div class="stat"><b class="grad">6</b><span>Products shipped</span></div>
+      <div class="stat"><b class="grad">3</b><span>Layers: mobile, web, API</span></div>
+      <div class="stat"><b class="grad">2</b><span>Team lead roles</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div class="track" id="m1"></div></div>
+<div class="marquee rev"><div class="track" id="m2"></div></div>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="title">What I <span class="grad">Build</span></h2>
+    <p class="sub">End to end product engineering: the app people tap, the dashboard teams run on, and the API that ties them together.</p>
+    <div class="svc">
+      <div class="svc-card reveal">
+        <div class="svc-ico i1"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
+        <h3>Mobile Apps</h3>
+        <p>Cross-platform and native apps for iOS and Android, built to ship and stay stable.</p>
+        <ul><li>Flutter, native Android (Java/Kotlin), iOS</li><li>Payments, wallets, BLE devices, health data</li><li>App Store and Play Store releases</li></ul>
+        <div class="chips"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Kotlin</span><span class="chip">BLoC</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico i2"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M7 13h4M7 16h7"/></svg></div>
+        <h3>Web Apps & Dashboards</h3>
+        <p>Admin panels and business dashboards that operations teams use every day.</p>
+        <ul><li>Admin and reporting dashboards</li><li>Business onboarding and management tools</li><li>Responsive web experiences next to the app</li></ul>
+        <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML/CSS</span><span class="chip">Flutter Web</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico i3"><svg viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/></svg></div>
+        <h3>APIs & Backend</h3>
+        <p>REST APIs, business logic and data models that hold up in production.</p>
+        <ul><li>REST API design and API contracts</li><li>Node.js and Python (FastAPI) services</li><li>Database design and SQL (AWS RDS)</li></ul>
+        <div class="chips"><span class="chip">Node.js</span><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">SQL</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico i4"><svg viewBox="0 0 24 24"><path d="M7 18a5 5 0 1 1 1-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8z"/></svg></div>
+        <h3>Cloud & Integrations</h3>
+        <p>The services and pipelines that keep products connected and shipping.</p>
+        <ul><li>AWS, Firebase, push and analytics</li><li>Plaid, payment, broker and wallet APIs</li><li>CI/CD pipelines and release automation</li></ul>
+        <div class="chips"><span class="chip">AWS</span><span class="chip">Firebase</span><span class="chip">CI/CD</span><span class="chip">Git</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="alt">
+  <div class="wrap">
+    <h2 class="title">Featured <span class="grad">Projects</span></h2>
+    <p class="sub">Products I've built and shipped across fintech, payments, healthcare, edtech and IoT, from mobile to web to API.</p>
+
+    <div class="feat reveal">
+      <div>
+        <div class="p-head"><span class="num">01</span><div class="layers"><span class="layer l-m">Mobile</span><span class="layer l-a">API</span><span class="layer l-c">Cloud</span></div></div>
+        <div class="tag">Fintech · Business banking & accounting</div>
+        <h3>looch: Business Banking & Accounting</h3>
+        <p>A fintech super app that combines business entity formation, banking, accounting, payments, tax reporting and corporate cards.</p>
+        <ul>
+          <li>Bank transfers, payments to contacts and external account linking with Plaid</li>
+          <li>Card management, Apple Wallet provisioning and spending limits</li>
+          <li>Chart of accounts, double-entry accounting, financial reports and 1099 documents</li>
+          <li>Node.js backend work, API contracts and database design discussions</li>
+        </ul>
+        <div class="chips"><span class="chip">Flutter</span><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">AWS</span><span class="chip">Firebase</span><span class="chip">Plaid</span></div>
+        <div class="links-row"><a class="btn ghost sm" href="https://apps.apple.com/us/app/looch-business-super-app/id1635431936" target="_blank" rel="noopener">App Store</a><a class="btn ghost sm" href="https://looch.money" target="_blank" rel="noopener">looch.money</a></div>
+      </div>
+      <div class="visual v1" style="--acc:#7c5cff" aria-hidden="true">
+        <div class="code" style="left:7%;top:12%"><span class="m">POST</span> /v1/transfers
+{
+  <span class="k">"amount"</span>: <span class="n">2450.00</span>,
+  <span class="k">"to"</span>: <span class="s">"contact_9aF3"</span>,
+  <span class="k">"status"</span>: <span class="s">"completed"</span>
+}</div>
+        <div class="phone" style="right:12%;top:9%">
+          <div class="ph-card"><s></s><u></u></div>
+          <div class="ph-row"><i></i><b></b><em></em></div>
+          <div class="ph-row"><i></i><b></b><em></em></div>
+          <div class="ph-row"><i></i><b></b><em></em></div>
+          <div class="ph-btn"></div>
+        </div>
+        <span class="vname">looch</span>
+      </div>
+    </div>
+
+    <div class="feat reveal">
+      <div>
+        <div class="p-head"><span class="num">02</span><div class="layers"><span class="layer l-w">Web</span><span class="layer l-m">Mobile</span><span class="layer l-a">API</span></div></div>
+        <div class="tag">Payments · Hospitality</div>
+        <h3>TopTipper: Cashless Tipping Platform</h3>
+        <p>QR-code tipping that helps car washes, hotels, transport and delivery businesses raise employee tips, with a web dashboard to run it all.</p>
+        <ul>
+          <li>Web dashboard for business onboarding, staff management and tip tracking</li>
+          <li>Transaction workflows, reporting, analytics and payroll export</li>
+          <li>QR and link-based tipping flow with third-party platform integrations</li>
+        </ul>
+        <div class="chips"><span class="chip">Flutter</span><span class="chip">Web dashboard</span><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">Payments</span></div>
+        <div class="links-row"><a class="btn ghost sm" href="https://toptipper.co/" target="_blank" rel="noopener">toptipper.co</a></div>
+      </div>
+      <div class="visual v3" style="--acc:#ffb547" aria-hidden="true">
+        <div class="browser" style="left:5%;top:12%">
+          <div class="bbar"><i></i><i></i><i></i><span>dashboard / tips</span></div>
+          <div class="bbody"><div class="side"><b></b><b></b><b></b><b></b></div>
+            <div class="main"><div class="kpis"><div class="kpi"><s></s><u></u></div><div class="kpi"><s></s><u></u></div><div class="kpi"><s></s><u></u></div></div>
+              <div class="chart"><i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:80%"></i><i style="height:60%"></i><i style="height:95%"></i></div></div></div>
+        </div>
+        <div class="phone" style="right:5%;bottom:-8%;width:24%;min-width:96px">
+          <div class="ph-big"><i></i></div><div class="ph-btn"></div>
+        </div>
+        <span class="vname">TopTipper</span>
+      </div>
+    </div>
+
+    <div class="feat reveal">
+      <div>
+        <div class="p-head"><span class="num">03</span><div class="layers"><span class="layer l-a">API</span><span class="layer l-c">Cloud</span></div></div>
+        <div class="tag">Fintech · Trading · Personal project</div>
+        <h3>AI Trading System: REST API & Strategy Engine</h3>
+        <p>A Python backend for algorithmic trading: market data APIs, technical indicators, signal generation, risk management and backtesting.</p>
+        <ul>
+          <li>FastAPI service with market status, candles, indicators and signal endpoints</li>
+          <li>Pluggable broker adapters for Delta Exchange and Dhan, plus a paper broker</li>
+          <li>Backtesting engine, risk manager, open interest analysis and Telegram alerts</li>
+          <li>Unit-tested core, with backtest, paper and live modes behind safety checks</li>
+        </ul>
+        <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">pandas</span><span class="chip">REST APIs</span><span class="chip">Broker APIs</span></div>
+        <div class="links-row"><a class="btn ghost sm" href="https://github.com/jnkHeer" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+      <div class="visual v6" aria-hidden="true">
+        <div class="code" style="left:8%;top:10%"><span class="g"># GET /api/btc-signal</span>
+<span class="m">HTTP/1.1</span> <span class="n">200</span> OK
+{
+  <span class="k">"symbol"</span>: <span class="s">"BTCUSD"</span>,
+  <span class="k">"signal"</span>: <span class="s">"BUY"</span>,
+  <span class="k">"rsi"</span>: <span class="n">41.7</span>,
+  <span class="k">"risk"</span>: { <span class="k">"stop"</span>: <span class="n">0.8</span> }
+}</div>
+        <div class="code" style="right:7%;bottom:12%"><span class="g">$</span> python main.py backtest
+<span class="s">✓</span> strategy loaded
+<span class="s">✓</span> 60-day backtest complete</div>
+        <span class="vname">Trading API</span>
+      </div>
+    </div>
+
+    <div class="feat reveal">
+      <div>
+        <div class="p-head"><span class="num">04</span><div class="layers"><span class="layer l-m">Mobile</span><span class="layer l-w">Web</span><span class="layer l-a">API</span></div></div>
+        <div class="tag">EdTech · K–12 tutoring</div>
+        <h3>YTeach: Peer Tutoring Platform</h3>
+        <p>Connects K–12 students with peer tutors for on-demand help, across iOS, Android and the web, with admin tools for schools.</p>
+        <ul>
+          <li>Tutor discovery, lesson scheduling and "Quick Connect" to the first free tutor</li>
+          <li>Real-time chat, push reminders and parent notifications</li>
+          <li>Admin dashboards, community service tracking, SIS data integration and 2FA</li>
+        </ul>
+        <div class="chips"><span class="chip">Flutter</span><span class="chip">Web</span><span class="chip">Real-time chat</span><span class="chip">REST APIs</span><span class="chip">FCM</span></div>
+        <div class="links-row"><a class="btn ghost sm" href="https://yteach.com/" target="_blank" rel="noopener">yteach.com</a></div>
+      </div>
+      <div class="visual v4" style="--acc:#c264e0" aria-hidden="true">
+        <div class="browser" style="left:5%;top:12%">
+          <div class="bbar"><i></i><i></i><i></i><span>admin / sessions</span></div>
+          <div class="bbody"><div class="side"><b></b><b></b><b></b><b></b></div>
+            <div class="main"><div class="kpis"><div class="kpi"><s></s><u></u></div><div class="kpi"><s></s><u></u></div><div class="kpi"><s></s><u></u></div></div>
+              <div class="rows"><b></b><b style="width:85%"></b><b></b><b style="width:70%"></b><b></b><b style="width:90%"></b></div></div></div>
+        </div>
+        <div class="phone" style="right:5%;bottom:-8%;width:24%;min-width:96px">
+          <div class="ph-row"><i></i><b></b></div><div class="ph-row"><i></i><b></b></div><div class="ph-row"><i></i><b></b></div><div class="ph-btn"></div>
+        </div>
+        <span class="vname">YTeach</span>
+      </div>
+    </div>
+
+    <div class="feat reveal">
+      <div>
+        <div class="p-head"><span class="num">05</span><div class="layers"><span class="layer l-m">Mobile</span><span class="layer l-c">IoT</span></div></div>
+        <div class="tag">IoT · Personal safety</div>
+        <h3>Shes Birdie: Connected Safety App</h3>
+        <p>A personal safety app paired with the Birdie+ connected safety alarm, on iOS and Android.</p>
+        <ul>
+          <li>Bluetooth device pairing, activation and mobile-to-hardware communication</li>
+          <li>Location sharing, emergency contacts and push notifications</li>
+          <li>Emergency response workflows, 24/7 on-call support and automated safety calls</li>
+        </ul>
+        <div class="chips"><span class="chip">Flutter</span><span class="chip">BLE</span><span class="chip">Location</span><span class="chip">Push notifications</span></div>
+        <div class="links-row"><a class="btn ghost sm" href="https://www.shesbirdie.com/" target="_blank" rel="noopener">shesbirdie.com</a></div>
+      </div>
+      <div class="visual v5" style="--acc:#ff5c8a" aria-hidden="true">
+        <div class="phone" style="left:50%;transform:translateX(-50%);top:9%">
+          <div class="ph-big"><i></i></div>
+          <div class="ph-row"><i></i><b></b></div>
+          <div class="ph-btn"></div>
+        </div>
+        <span class="vname">Shes Birdie</span>
+      </div>
+    </div>
+
+    <div class="feat reveal">
+      <div>
+        <div class="p-head"><span class="num">06</span><div class="layers"><span class="layer l-m">Mobile</span><span class="layer l-a">API</span></div></div>
+        <div class="tag">Healthcare · Digital health</div>
+        <h3>Metabolic (GlueCare)</h3>
+        <p>A digital health platform that helps patients monitor metabolic health, track records and stay connected with their care team.</p>
+        <ul>
+          <li>Personalized metabolic health score, lab results and medical reports</li>
+          <li>Apple HealthKit and wearable integrations for glucose, weight and activity</li>
+          <li>Food logging, appointments, reminders and in-app chat with clinicians</li>
+        </ul>
+        <div class="chips"><span class="chip">Flutter</span><span class="chip">HealthKit</span><span class="chip">Wearables</span><span class="chip">REST APIs</span></div>
+        <div class="links-row"><a class="btn ghost sm" href="https://apps.apple.com/sg/app/metabolic/id6443438112" target="_blank" rel="noopener">App Store</a></div>
+      </div>
+      <div class="visual v2" style="--acc:#3ee08f" aria-hidden="true">
+        <div class="phone" style="left:16%;top:9%">
+          <div class="ph-big"><i></i></div>
+          <div class="ph-row"><i></i><b></b><em></em></div>
+          <div class="ph-row"><i></i><b></b><em></em></div>
+        </div>
+        <div class="phone" style="right:16%;top:16%">
+          <div class="ph-card"><s></s><u></u></div>
+          <div class="ph-row"><i></i><b></b></div><div class="ph-row"><i></i><b></b></div><div class="ph-row"><i></i><b></b></div>
+        </div>
+        <span class="vname">Metabolic</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="title">About <span class="grad">Me</span></h2>
+    <p class="sub">Engineer, team lead and problem solver.</p>
+    <div class="about">
+      <div class="reveal">
+        <h3>From the database to the device</h3>
+        <p>I'm a Software Developer with 8+ years of experience building <b>mobile apps, web apps and REST APIs</b>. My roots are native Android; since 2019 most of my mobile work has been in Flutter, alongside Node.js and Python backends, web dashboards and cloud services on AWS and Firebase.</p>
+        <p>I led mobile teams at Elint Minds and Softradix, where I also worked on web application development, backend engineering, API design and database structures. Since 2023 I've been a Senior Software Engineer at looch, building a fintech business super app across mobile, backend APIs and cloud.</p>
+        <p>I like owning features end to end: talking through requirements with founders, designing the API contract, building the screens and shipping the release.</p>
+        <p>Right now I'm looking for <b>Full Stack, Senior Mobile (Flutter), Backend or Technical Lead</b> roles: remote worldwide, or on-site and hybrid in India.</p>
+      </div>
+      <div class="values reveal">
+        <div class="value">📱 Mobile<small>Flutter, Android, iOS</small></div>
+        <div class="value">🖥️ Web<small>Dashboards, admin panels</small></div>
+        <div class="value">🔌 APIs<small>REST, Node.js, FastAPI</small></div>
+        <div class="value">🗄️ Data<small>Database design, SQL</small></div>
+        <div class="value">☁️ Cloud<small>AWS, Firebase, CI/CD</small></div>
+        <div class="value">👥 Leadership<small>Mentoring, code reviews</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="alt">
+  <div class="wrap">
+    <h2 class="title">Skills & <span class="grad">Technologies</span></h2>
+    <p class="sub">The tools I use to design, build and ship across the stack.</p>
+    <div class="skills">
+      <div class="skill-card reveal"><h4>📱 Mobile</h4>
+        <div class="row">Flutter & Dart<span class="lvl e">Expert</span></div>
+        <div class="row">Android (Java, Kotlin)<span class="lvl e">Expert</span></div>
+        <div class="row">GetX, BLoC / Cubit<span class="lvl e">Expert</span></div>
+        <div class="row">iOS & App Store<span class="lvl a">Advanced</span></div>
+        <div class="row">BLE & device integration<span class="lvl a">Advanced</span></div>
+        <div class="row">HealthKit & wearables<span class="lvl a">Advanced</span></div>
+      </div>
+      <div class="skill-card reveal"><h4>🔌 Backend & APIs</h4>
+        <div class="row">REST API design<span class="lvl e">Expert</span></div>
+        <div class="row">Node.js<span class="lvl a">Advanced</span></div>
+        <div class="row">Python & FastAPI<span class="lvl a">Advanced</span></div>
+        <div class="row">Database design & SQL<span class="lvl a">Advanced</span></div>
+        <div class="row">Auth, 2FA & security<span class="lvl a">Advanced</span></div>
+        <div class="row">Third-party API integration<span class="lvl e">Expert</span></div>
+      </div>
+      <div class="skill-card reveal"><h4>🖥️ Web</h4>
+        <div class="row">JavaScript<span class="lvl a">Advanced</span></div>
+        <div class="row">HTML & CSS<span class="lvl a">Advanced</span></div>
+        <div class="row">Admin dashboards<span class="lvl a">Advanced</span></div>
+        <div class="row">Responsive UI<span class="lvl a">Advanced</span></div>
+        <div class="row">Flutter Web<span class="lvl p">Proficient</span></div>
+        <div class="row">Analytics & reporting<span class="lvl a">Advanced</span></div>
+      </div>
+      <div class="skill-card reveal"><h4>☁️ Cloud & Delivery</h4>
+        <div class="row">Firebase & FCM<span class="lvl e">Expert</span></div>
+        <div class="row">AWS (incl. RDS)<span class="lvl a">Advanced</span></div>
+        <div class="row">CI/CD pipelines<span class="lvl e">Expert</span></div>
+        <div class="row">Git, GitHub & Jira<span class="lvl e">Expert</span></div>
+        <div class="row">Testing & debugging<span class="lvl a">Advanced</span></div>
+        <div class="row">Team leadership<span class="lvl e">Expert</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2 class="title">Professional <span class="grad">Journey</span></h2>
+    <p class="sub">From junior Android developer to team lead and full stack engineer.</p>
+    <div class="timeline">
+      <div class="job now reveal"><div class="job-card">
+        <div class="meta"><span>May 2023 to Present</span><span>Bengaluru, India · Remote · Full-time</span></div>
+        <h4>Senior Software Engineer</h4><div class="co">looch</div>
+        <ul>
+          <li>Build and ship the looch fintech business super app for iOS and Android in Flutter, from technical design to store releases.</li>
+          <li>Business banking, global payments, Plaid account linking, cards, Apple Wallet, spending limits and BLE.</li>
+          <li>Accounting workflows: chart of accounts, double-entry accounting, financial reports and 1099 tax documents.</li>
+          <li>Node.js backend work, REST API contracts and database design; AWS, Firebase, analytics and deep linking.</li>
+          <li>Work directly with the CEO, using AI-assisted development and AI, integration and automation testing.</li>
+        </ul>
+        <div class="chips"><span class="chip">Flutter</span><span class="chip">Fintech</span><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">AWS</span><span class="chip">Firebase</span><span class="chip">BLE</span></div>
+      </div></div>
+      <div class="job reveal"><div class="job-card">
+        <div class="meta"><span>Dec 2020 to May 2023</span><span>Mohali, Punjab</span></div>
+        <h4>Senior Software Engineer · Team Lead</h4><div class="co">Softradix Technologies Pvt. Ltd.</div>
+        <ul>
+          <li>Led a team of developers: technical direction, code reviews, sprint workflows and feature delivery.</li>
+          <li>Shipped TopTipper, YTeach and Metabolic across iOS, Android and web.</li>
+          <li>Designed and built REST APIs, backend business logic and database structures in Node.js.</li>
+          <li>Owned architecture, third-party integrations, testing, release management and production troubleshooting.</li>
+        </ul>
+        <div class="chips"><span class="chip">Flutter</span><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">Web</span><span class="chip">Team lead</span></div>
+      </div></div>
+      <div class="job reveal"><div class="job-card">
+        <div class="meta"><span>Mar 2020 to Nov 2020</span><span>Mohali, Punjab</span></div>
+        <h4>Senior Software Engineer · Team Lead</h4><div class="co">Elint Minds</div>
+        <ul>
+          <li>Led the mobile team with technical direction, code reviews and coordinated delivery.</li>
+          <li>Built and released production iOS and Android apps in Flutter, with API integration end to end.</li>
+        </ul>
+      </div></div>
+      <div class="job reveal"><div class="job-card">
+        <div class="meta"><span>Mar 2019 to Feb 2020</span><span>Mohali, Punjab</span></div>
+        <h4>Android & Flutter Developer</h4><div class="co">Zimble Code</div>
+        <ul>
+          <li>Built and maintained cross-platform and native Android apps.</li>
+          <li>UI development, API integration, performance tuning, testing and releases with backend, design and QA teams.</li>
+        </ul>
+      </div></div>
+      <div class="job reveal"><div class="job-card">
+        <div class="meta"><span>Sep 2017 to Mar 2019</span><span>Mohali, Punjab</span></div>
+        <h4>Android Developer</h4><div class="co">Beyond Root Technology Services</div>
+        <ul>
+          <li>Developed Android apps with Java, Kotlin and the Android SDK, and integrated REST APIs.</li>
+          <li>Testing, debugging, Git/GitHub workflows and releases alongside senior developers, design and QA.</li>
+        </ul>
+      </div></div>
+      <div class="job edu reveal"><div class="job-card">
+        <div class="meta"><span>2014</span><span>Ambala, Haryana</span></div>
+        <h4>B.Tech</h4><div class="co">Maharishi Markandeshwar Engineering College</div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap">
+    <h2 class="title">Let's <span class="grad">Connect</span></h2>
+    <p class="sub">Hiring for a full stack, mobile or backend role? I'd love to hear about it.</p>
+    <div class="contact">
+      <div class="c-card reveal">
+        <div class="c-item"><div class="c-ico"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6l8 5 8-5v2.24z"/></svg></div><div><small>Email</small><a href="mailto:janak206@gmail.com">janak206@gmail.com</a></div></div>
+        <div class="c-item"><div class="c-ico"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg></div><div><small>Phone & WhatsApp</small><a href="tel:+919465065059">+91 94650 65059</a></div></div>
+        <div class="c-item"><div class="c-ico"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.850-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></div><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/janak-raj-software-dev" target="_blank" rel="noopener">janak-raj-software-dev</a></div></div>
+        <div class="c-item"><div class="c-ico"><svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></div><div><small>GitHub</small><a href="https://github.com/jnkHeer" target="_blank" rel="noopener">github.com/jnkHeer</a></div></div>
+        <div class="c-item"><div class="c-ico"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></div><div><small>Location</small>Mohali, India · Open to remote worldwide</div></div>
+        <a href="Janak_Raj_Resume.pdf" download class="btn primary" style="margin-top:14px;width:100%">Download Resume (PDF)</a>
+      </div>
+      <div class="c-card reveal">
+        <h3 style="font-size:22px">Send a message</h3>
+        <p style="color:var(--muted);font-size:14px">Opens WhatsApp or your email app with everything filled in.</p>
+        <form id="form" onsubmit="return false">
+          <label for="name">Your name</label><input id="name" autocomplete="name" placeholder="Jane Smith">
+          <label for="company">Company</label><input id="company" autocomplete="organization" placeholder="Acme Inc.">
+          <label for="kind">Opportunity</label>
+          <select id="kind"><option>Full-time role</option><option>Contract role</option><option>Freelance project</option><option>Just saying hi</option></select>
+          <label for="msg">Message</label><textarea id="msg" placeholder="Tell me about the role or project"></textarea>
+          <div class="form-btns">
+            <button class="btn primary" type="button" id="wa">Send on WhatsApp</button>
+            <button class="btn ghost" type="button" id="em">Send by email</button>
+          </div>
+          <div class="form-note" id="note" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> Janak Raj · Full Stack Software Developer · Mobile, Web & APIs</footer>
+
+<script>
+const skills=["Flutter","Dart","Android","Kotlin","Java","iOS","Node.js","Python","FastAPI","REST APIs","JavaScript","HTML/CSS","SQL","AWS","Firebase","CI/CD","GetX","BLoC / Cubit","Plaid","Apple Wallet","BLE","HealthKit","Git","Jira"];
+const prods=["looch","TopTipper","AI Trading API","YTeach","Shes Birdie","Metabolic","Fintech","Payments","Healthcare","EdTech","IoT","Mobile · Web · API"];
+const fill=(id,arr)=>{document.getElementById(id).innerHTML=[...arr,...arr].map(s=>`<span class="pill">${s}</span>`).join("")};
+fill("m1",skills);fill("m2",prods);
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+const nav=document.getElementById("nav");
+const onScroll=()=>nav.classList.toggle("scrolled",scrollY>20);
+addEventListener("scroll",onScroll,{passive:true});onScroll();
+const links=document.getElementById("links"),burger=document.getElementById("burger");
+burger.onclick=()=>{const o=links.classList.toggle("open");burger.setAttribute("aria-expanded",o)};
+links.querySelectorAll("a").forEach(a=>a.onclick=()=>{links.classList.remove("open");burger.setAttribute("aria-expanded",false)});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+const secs=[...document.querySelectorAll("section[id]")],navA=[...links.querySelectorAll("a")];
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)navA.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+secs.forEach(s=>so.observe(s));
+
+const g=id=>document.getElementById(id).value.trim(),note=document.getElementById("note");
+const text=()=>`Hi Janak, I'm ${g("name")}${g("company")?" from "+g("company"):""}.\nOpportunity: ${g("kind")}\n\n${g("msg")}`;
+const ok=()=>{if(!g("name")){note.textContent="Please add your name first.";document.getElementById("name").focus();return false}note.textContent="";return true};
+document.getElementById("wa").onclick=()=>ok()&&open("https://wa.me/919465065059?text="+encodeURIComponent(text()),"_blank");
+document.getElementById("em").onclick=()=>{if(ok())location.href="mailto:janak206@gmail.com?subject="+encodeURIComponent("Opportunity for Janak Raj")+"&body="+encodeURIComponent(text())};
+
+const c=document.getElementById("stars"),x=c.getContext("2d");let st=[];
+function size(){const d=devicePixelRatio||1;c.width=c.offsetWidth*d;c.height=c.offsetHeight*d;x.setTransform(d,0,0,d,0,0);st=Array.from({length:90},()=>({x:Math.random()*c.offsetWidth,y:Math.random()*c.offsetHeight,r:Math.random()*1.3+.2,v:Math.random()*.25+.05}))}
+const still=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function draw(){x.clearRect(0,0,c.width,c.height);st.forEach(s=>{if(!still){s.y-=s.v;if(s.y<0)s.y=c.offsetHeight}x.fillStyle="rgba(255,255,255,.5)";x.beginPath();x.arc(s.x,s.y,s.r,0,7);x.fill()});if(!still)requestAnimationFrame(draw)}
+addEventListener("resize",size);size();draw();
+</script>
+</body>
+</html>
